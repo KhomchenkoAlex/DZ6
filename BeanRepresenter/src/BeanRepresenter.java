@@ -1,6 +1,4 @@
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.TreeMap;
@@ -20,8 +18,8 @@ public class BeanRepresenter {
             field.setAccessible(true);
             value = field.get(inputObject);
             key = field.getName();
-            fieldMap.put(key,value);
-            }
+            fieldMap.put(key, value);
+        }
         return fieldMap;
     }
 }
@@ -32,7 +30,7 @@ class TestClass {
     double b = 1.5;
     public String name = "Some name";
     int[] array = {1, 2, 3, 4, 5, 6};
-    List list = Arrays.asList(10,20,30);
+    List list = Arrays.asList(10, 20, 30);
 }
 
 class BeanRepresenterTest {
@@ -46,11 +44,11 @@ class BeanRepresenterTest {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-        for(String key: treemap.keySet()){
+        for (String key : treemap.keySet()) {
             Object value = treemap.get(key);
-                System.out.println(key+" "+value.toString());
+            System.out.println(key + " " + value.toString());
 
-            }
         }
     }
+}
 
