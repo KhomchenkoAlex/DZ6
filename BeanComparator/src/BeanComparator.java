@@ -39,7 +39,7 @@ public class BeanComparator {
     }
 }
 
-class TestClass1 {
+ class TestClass1 {
     protected boolean flag = true;
     public int a = (int) (Math.random() * 10);
     public int b = (int) (Math.random() * 10);
